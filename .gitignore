@@ -1,3 +1,15 @@
 .vscode
 db.sqlite3
 mocroservices.session.sql
+
+#Library Pycache
+library_project/__pycache__/
+library_project/migrations/__pycache__/
+
+#Books Pycache
+books/__pycache__ /
+books/migrations/__pycache__/
+
+#Todos Pycache
+todos/__pycache__ /
+todos/migrations/__pycache__/
