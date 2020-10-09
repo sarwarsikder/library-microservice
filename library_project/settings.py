@@ -39,7 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #3rd Party Apps/Plugins
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
     'corsheaders',
+    'oauth2_provider',
+
     #Apps
     'books.apps.BooksConfig',
     'todos.apps.TodosConfig'
@@ -56,6 +60,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
+
 
 ROOT_URLCONF = 'library_project.urls'
 
@@ -110,7 +117,11 @@ AUTH_PASSWORD_VALIDATORS = [
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
-    ]
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+],
+
 }
 
 
