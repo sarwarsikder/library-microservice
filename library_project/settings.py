@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     #Apps
     'books.apps.BooksConfig',
     'todos.apps.TodosConfig',
-    'users.apps.TodosConfig',
+    'users.apps.UsersConfig',
     
 ]
 

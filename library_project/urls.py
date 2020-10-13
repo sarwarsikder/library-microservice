@@ -18,9 +18,15 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #oAuth ToolKit
     path('api/v1/rest-auth/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     #path('api/v1/rest-auth/', include('rest_auth.urls')),
+    # Books Urls
     path('api/v1/books/', include('books.urls')),
+    #Todo Urls
     path('api/v1/todo/', include('todos.urls')),
-    path('api-auth/',include('rest_framework.urls')),
+    #Users Urls
+    path('api/v1/user/', include('users.urls')),
+
+
 ]
